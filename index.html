@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minima Nexus Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Minima Nexus</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#wallet">Wallet</a>
+    <a href="#send">Send</a>
+    <a href="#chat">Community</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Interact With Minima Through MiniMask</h1>
+  <p>A classic web portal for connecting MiniMask, viewing wallet status, sending transactions, and exploring Minima network tools.</p>
+  <button onclick="connectMiniMask()">Connect MiniMask</button>
+  <p id="connectStatus">MiniMask not connected</p>
+</section>
+
+<section class="card" id="wallet">
+  <h2>Wallet Dashboard</h2>
+  <p>Check your Minima address and balance directly from MiniMask.</p>
+  <button onclick="getAddress()">Get Address</button>
+  <button onclick="getBalance()">Get Balance</button>
+
+  <div class="output">
+    <p><strong>Address:</strong> <span id="address">Not loaded</span></p>
+    <p><strong>Balance:</strong> <span id="balance">Not loaded</span></p>
+  </div>
+</section>
+
+<section class="card" id="send">
+  <h2>Send Minima Transaction</h2>
+  <p>Send a transaction using MiniMask wallet permission.</p>
+
+  <input type="text" id="receiver" placeholder="Receiver address" />
+  <input type="number" id="amount" placeholder="Amount" />
+  <button onclick="sendTransaction()">Send Transaction</button>
+
+  <p id="txStatus"></p>
+</section>
+
+<section class="card" id="chat">
+  <h2>Community Message Board</h2>
+  <p>Share a message locally from the portal interface.</p>
+
+  <input type="text" id="messageInput" placeholder="Write your message" />
+  <button onclick="postMessage()">Post Message</button>
+
+  <div id="messages"></div>
+</section>
+
+<section class="card" id="about">
+  <h2>About This Portal</h2>
+  <p>
+    Minima Nexus Portal is built to help users interact with the Minima network through the MiniMask browser extension.
+    It includes wallet connection, balance checking, transaction sending, and a simple community interface.
+  </p>
+</section>
+
+<footer>
+  <p>Built for Minima Network • MiniMask Web Portal</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
